@@ -117,12 +117,8 @@ body {
   display: block;
   background: white;
 }
-.hero__top a {
-  display: none;
-}
-
 .menu-open .hero__top a {
-  display: inline-block;
+  display: none;
 }
 /* =========================
    TITRE
