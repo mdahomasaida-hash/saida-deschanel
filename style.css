@@ -1,43 +1,412 @@
-@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&display=swap");
-:root{--orange:#ed6741;--coral:#e85b5c;--rose:#dc7893;--fuchsia:#c94782;--cream:#fff8f1;--white:#fffaf7;--ink:#4e2930;--shadow:rgba(74,30,32,.23)}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;min-width:320px;color:var(--white);background:var(--orange);font-family:"Cormorant Garamond",Georgia,serif}
-.site{min-height:100vh;overflow:hidden;background:radial-gradient(circle at 14% 8%,rgba(255,255,255,.15),transparent 27%),radial-gradient(circle at 88% 82%,rgba(255,190,215,.20),transparent 31%),linear-gradient(145deg,#ef6a3b 0%,#e75c58 45%,#dc7089 72%,#c96f99 100%)}
-.hero{position:relative;min-height:100svh;display:grid;place-items:center;padding:24px 18px 48px}
-.hero__glow{position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse at 50% 38%,rgba(255,255,255,.09),transparent 55%)}
-.hero__content{position:relative;z-index:2;width:min(100%,620px);text-align:center}
-.hero__top{display:flex;align-items:center;justify-content:space-between;margin-bottom:28px}
-.eyebrow{font-size:18px;letter-spacing:.08em}
-.menu-button{width:44px;height:44px;display:grid;place-content:center;gap:6px;border:1px solid rgba(255,255,255,.75);border-radius:50%;background:transparent;cursor:pointer}
-.menu-button span{display:block;width:18px;height:1px;background:#fff}
-.hero__date{margin:0 0 8px;font-size:clamp(18px,4vw,22px);letter-spacing:.07em}
-h1{margin:0;display:flex;flex-wrap:wrap;justify-content:center;align-items:baseline;gap:.12em;font-family:"Brittany","Snell Roundhand","Brush Script MT",cursive;font-size:clamp(58px,15vw,104px);font-weight:400;line-height:.88;letter-spacing:-.025em;text-shadow:0 3px 14px rgba(91,34,28,.13)}
-h1 .ampersand{font-size:.58em;margin-inline:.03em}
-.hero__place{margin:16px 0 25px;font-size:clamp(18px,4vw,21px);letter-spacing:.06em}
-.photo-frame{position:relative;width:min(88vw,370px);margin:0 auto 28px;transform:rotate(-2deg)}
-.photo-frame__halo{position:absolute;inset:-16px -34px -18px;border-radius:28px;background:linear-gradient(135deg,rgba(255,245,236,.48),rgba(201,80,120,.42)),url("photo-entree.jpg") center/cover;filter:blur(25px);opacity:.85;transform:rotate(4deg) scale(1.06);z-index:-1}
-.photo-frame__paper{position:relative;padding:10px;background:rgba(255,248,242,.97);box-shadow:0 22px 42px var(--shadow),0 4px 10px rgba(70,30,30,.10)}
-.hero-photo{display:block;width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center}
-.collage{position:absolute;z-index:3;display:grid;place-items:center;color:#fff5ea;text-shadow:0 3px 8px rgba(80,25,20,.20)}
-.collage--flower{left:-21px;bottom:-24px;width:65px;height:65px;font-size:48px;transform:rotate(-12deg)}
-.collage--spark{right:-18px;top:-19px;font-size:43px;transform:rotate(14deg)}
-.hero__intro{max-width:500px;margin:0 auto 26px;font-size:clamp(19px,4.4vw,23px);line-height:1.42}
-.hero__intro span{font-size:1.02em}
-.countdown{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;width:min(100%,440px);margin:0 auto 26px}
-.countdown div{padding:10px 3px;border-top:1px solid rgba(255,255,255,.58);border-bottom:1px solid rgba(255,255,255,.58)}
-.countdown strong,.countdown span{display:block}
-.countdown strong{font-size:clamp(25px,6vw,32px);line-height:1;font-weight:600}
-.countdown span{margin-top:5px;font-size:12px;text-transform:uppercase;letter-spacing:.07em}
-.outline-button{display:inline-block;padding:13px 27px;border:1px solid rgba(255,255,255,.95);border-radius:999px;color:#fff;text-decoration:none;font-size:19px;letter-spacing:.02em;transition:background .25s ease,color .25s ease,transform .25s ease,box-shadow .25s ease}
-.outline-button:hover,.outline-button:focus-visible{background:#fff;color:var(--orange);transform:translateY(-2px);box-shadow:0 8px 22px rgba(91,34,28,.18)}
-.scroll-cue{display:flex;flex-direction:column;align-items:center;gap:6px;margin-top:25px;color:#fff;text-decoration:none;font-size:15px;letter-spacing:.05em}
-.scroll-cue i{display:block;width:1px;height:27px;background:rgba(255,255,255,.82);animation:scrollLine 1.8s ease-in-out infinite}
-@keyframes scrollLine{0%,100%{opacity:.35;transform:scaleY(.7)}50%{opacity:1;transform:scaleY(1)}}
-.placeholder-section{min-height:70vh;padding:90px 24px;color:var(--ink);background:var(--cream);text-align:center}
-.section-kicker{margin:0 0 7px;text-transform:uppercase;letter-spacing:.16em;font-size:13px}
-.placeholder-section h2{margin:0 0 15px;font-family:"Brittany","Snell Roundhand",cursive;font-size:clamp(54px,13vw,78px);font-weight:400;line-height:.95}
-.placeholder-section p:last-child{max-width:440px;margin:auto;font-size:20px;line-height:1.5}
-@media(min-width:700px){.hero{padding:35px 32px 55px}.photo-frame{width:380px}.hero__intro{font-size:23px}}
-@media(min-width:1000px){.hero__content{width:680px}h1{font-size:108px}.photo-frame{width:395px}}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.scroll-cue i{animation:none}}
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@400;500;600&display=swap');
+
+:root {
+  --orange: #ef6842;
+  --corail: #ed6b70;
+  --rose: #d97891;
+  --fuchsia: #b83d70;
+  --cream: #fff8f1;
+  --brown: #552b35;
+  --green: #6d8060;
+  --gold: #e9c47a;
+  --white: #fffaf7;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: var(--cream);
+  color: var(--brown);
+  font-family: "Cormorant Garamond", Georgia, serif;
+}
+
+.site {
+  overflow: hidden;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+  position: relative;
+  min-height: 100svh;
+  padding: 28px 20px 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: var(--white);
+
+  background:
+    radial-gradient(
+      circle at 15% 10%,
+      rgba(255,255,255,.16),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 85% 85%,
+      rgba(255,180,200,.20),
+      transparent 30%
+    ),
+    linear-gradient(
+      145deg,
+      #f2693f 0%,
+      #ef6870 48%,
+      #d87891 100%
+    );
+}
+
+.hero__backdrop {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(
+      ellipse at center,
+      rgba(255,255,255,.08),
+      transparent 65%
+    );
+}
+
+.hero__content {
+  position: relative;
+  z-index: 2;
+  width: min(100%, 650px);
+}
+
+/* =========================
+   TOP
+========================= */
+
+.hero__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 35px;
+}
+
+.eyebrow {
+  font-size: 20px;
+  letter-spacing: .08em;
+}
+
+.menu-button {
+  width: 54px;
+  height: 54px;
+  border: 1px solid rgba(255,255,255,.75);
+  border-radius: 50%;
+  background: transparent;
+  display: grid;
+  place-content: center;
+  gap: 7px;
+  cursor: pointer;
+}
+
+.menu-button span {
+  width: 23px;
+  height: 1px;
+  display: block;
+  background: white;
+}
+
+/* =========================
+   TITRE
+========================= */
+
+.hero__date {
+  margin: 0 0 8px;
+  font-size: 22px;
+  letter-spacing: .08em;
+}
+
+h1 {
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: baseline;
+  gap: .12em;
+
+  font-family:
+    "Brittany",
+    "Snell Roundhand",
+    "Brush Script MT",
+    cursive;
+
+  font-weight: 400;
+  font-size: clamp(55px, 15vw, 105px);
+  line-height: .9;
+  text-shadow: 0 3px 15px rgba(80,25,20,.12);
+}
+
+h1 .ampersand {
+  font-size: .58em;
+}
+
+.hero__place {
+  margin: 18px 0 28px;
+  font-size: 21px;
+  letter-spacing: .07em;
+}
+
+/* =========================
+   PHOTO
+========================= */
+
+.photo-frame {
+  position: relative;
+  width: min(88vw, 380px);
+  margin: 0 auto 30px;
+  transform: rotate(-2deg);
+}
+
+.photo-frame__backdrop {
+  position: absolute;
+  inset: -15px -30px;
+  border-radius: 28px;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255,245,236,.5),
+      rgba(194,91,112,.35)
+    );
+
+  filter: blur(24px);
+  opacity: .8;
+  transform: rotate(4deg) scale(1.04);
+}
+
+.photo-frame__paper {
+  position: relative;
+  padding: 10px;
+  background: rgba(255,248,242,.97);
+  box-shadow: 0 20px 40px rgba(91,34,28,.20);
+}
+
+.hero-photo {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+}
+
+/* décor autour de la photo */
+
+.collage {
+  position: absolute;
+  z-index: 3;
+  color: #fff5ea;
+  text-shadow: 0 3px 8px rgba(80,25,20,.2);
+}
+
+.collage--flower {
+  left: -22px;
+  bottom: -25px;
+  font-size: 55px;
+  transform: rotate(-12deg);
+}
+
+.collage--spark {
+  right: -20px;
+  top: -22px;
+  font-size: 45px;
+  transform: rotate(14deg);
+}
+
+/* =========================
+   INTRO
+========================= */
+
+.hero__intro {
+  max-width: 520px;
+  margin: 0 auto 30px;
+  font-size: 22px;
+  line-height: 1.45;
+}
+
+.hero__intro span {
+  display: inline-block;
+  margin-top: 18px;
+  font-size: 23px;
+}
+
+/* =========================
+   COMPTE À REBOURS
+========================= */
+
+.countdown {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  max-width: 500px;
+  margin: 0 auto 30px;
+}
+
+.countdown div {
+  padding: 12px 4px;
+  border-top: 1px solid rgba(255,255,255,.55);
+  border-bottom: 1px solid rgba(255,255,255,.55);
+}
+
+.countdown strong,
+.countdown span {
+  display: block;
+}
+
+.countdown strong {
+  font-size: 30px;
+  line-height: 1;
+  font-weight: 600;
+}
+
+.countdown span {
+  margin-top: 6px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+}
+
+/* =========================
+   BOUTON
+========================= */
+
+.outline-button {
+  display: inline-block;
+  padding: 14px 32px;
+
+  border: 1px solid rgba(255,255,255,.95);
+  border-radius: 999px;
+
+  color: white;
+  text-decoration: none;
+  font-size: 21px;
+
+  transition:
+    background .25s ease,
+    color .25s ease,
+    transform .25s ease;
+}
+
+.outline-button:hover,
+.outline-button:focus-visible {
+  background: white;
+  color: var(--corail);
+  transform: translateY(-2px);
+}
+
+/* =========================
+   DÉCOUVRIR
+========================= */
+
+.scroll-cue {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 7px;
+
+  margin-top: 28px;
+
+  color: white;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.scroll-cue i {
+  display: block;
+  width: 1px;
+  height: 30px;
+  background: rgba(255,255,255,.8);
+}
+
+/* =========================
+   SECTION SUIVANTE
+========================= */
+
+.next-section {
+  min-height: 65vh;
+  padding: 90px 25px;
+
+  background: var(--cream);
+  color: var(--brown);
+
+  text-align: center;
+}
+
+.section-kicker {
+  margin: 0 0 8px;
+
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: .22em;
+}
+
+.next-section h2 {
+  margin: 0 0 18px;
+
+  font-family:
+    "Brittany",
+    "Snell Roundhand",
+    "Brush Script MT",
+    cursive;
+
+  font-size: 68px;
+  font-weight: 400;
+}
+
+.next-section p:last-child {
+  max-width: 520px;
+  margin: auto;
+
+  font-size: 22px;
+  line-height: 1.5;
+}
+
+/* =========================
+   TABLET / ORDINATEUR
+========================= */
+
+@media (min-width: 700px) {
+
+  .hero {
+    padding: 40px 35px 65px;
+  }
+
+  .hero__content {
+    width: min(100%, 720px);
+  }
+
+  .hero__intro {
+    font-size: 24px;
+  }
+
+  .photo-frame {
+    width: 390px;
+  }
+
+  .countdown {
+    max-width: 560px;
+  }
+}
+
+/* =========================
+   ACCESSIBILITÉ
+========================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  html {
+    scroll-behavior: auto;
+  }
+}
