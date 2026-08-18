@@ -410,3 +410,42 @@ h1 .ampersand {
     scroll-behavior: auto;
   }
 }
+/* =========================
+   MENU
+========================= */
+
+.site-menu {
+  display: none;
+}
+
+body.menu-open .site-menu {
+  display: flex;
+  position: fixed;
+  z-index: 20;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+
+  background: linear-gradient(
+    145deg,
+    #f2693f 0%,
+    #ef6870 48%,
+    #d87891 100%
+  );
+}
+
+.site-menu a {
+  color: white;
+  text-decoration: none;
+  font-size: 32px;
+}
+
+.site-menu a:hover {
+  opacity: .7;
+}
