@@ -343,13 +343,36 @@ h1 .ampersand {
 ========================= */
 
 .next-section {
-  min-height: 65vh;
-  padding: 90px 25px;
+#rsvp {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
 
-  background: var(--cream);
-  color: var(--brown);
+#rsvp h2 {
+  max-width: 700px;
+  margin: 0 auto 28px;
+  font-size: 52px;
+  line-height: 1.1;
+}
 
-  text-align: center;
+#rsvp p {
+  max-width: 680px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.8;
+}
+
+#rsvp ul {
+  max-width: 520px;
+  margin: 25px auto 30px;
+  padding-left: 20px;
+  text-align: left;
+}
+
+#rsvp li {
+  margin-bottom: 10px;
+}
+  
 }
 
 .section-kicker {
