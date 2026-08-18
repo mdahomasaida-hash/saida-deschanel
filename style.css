@@ -172,16 +172,30 @@ h1 .ampersand {
 ========================= */
 
 .photo-frame {
+  width: 100vw;
+  margin: 0;
+  padding: 0;
   position: relative;
-  width: min(88vw, 380px);
-  margin: 0 auto 30px;
-  transform: rotate(-2deg);
+  transform: none;
 }
 
 .photo-frame__backdrop {
-  position: absolute;
-  inset: -15px -30px;
-  border-radius: 28px;
+  display: none;
+}
+
+.photo-frame__paper {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.photo-frame__paper img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+}
 
   background:
     linear-gradient(
