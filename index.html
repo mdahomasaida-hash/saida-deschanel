@@ -82,5 +82,12 @@ Nous avons décidé de nous marier.
 </section>
 </main>
 <script src="script.js"></script>
+<script>
+document.querySelectorAll('.site-menu a').forEach(link => {
+  link.addEventListener('click', () => {
+    document.body.classList.remove('menu-open');
+  });
+});
+</script>
 </body>
 </html>
