@@ -217,10 +217,10 @@ h1 .ampersand {
 }
 
 .hero-photo {
-  display: block;
-  width: 100%;
-  aspect-ratio: 4 / 5;
-  object-fit: cover;
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
 }
 
 /* décor autour de la photo */
