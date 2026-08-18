@@ -117,6 +117,13 @@ body {
   display: block;
   background: white;
 }
+.site-menu {
+  display: none;
+}
+
+.menu-open .site-menu {
+  display: flex;
+}
 .menu-open .hero__top a {
   display: none;
 }
