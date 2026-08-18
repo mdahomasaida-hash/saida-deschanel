@@ -482,3 +482,66 @@ body.menu-open .site-menu {
 .site-menu a:hover {
   opacity: .7;
 }
+/* PHOTO PRINCIPALE — nouvelle version */
+
+.photo-frame {
+    position: relative;
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    transform: none;
+    padding: 0;
+    border-radius: 0;
+    box-shadow: none;
+    background: none;
+}
+
+.photo-frame__backdrop {
+    display: none;
+}
+
+.photo-frame__halo {
+    display: none;
+}
+
+.photo-frame__paper {
+    position: relative;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border-radius: 0;
+    background: none;
+    box-shadow: none;
+    transform: none;
+}
+
+.photo-frame img.hero-photo {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-width: none;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+    object-fit: contain;
+}
+
+/* Sur mobile : la photo touche vraiment les deux bords de l'écran */
+@media (max-width: 600px) {
+    .photo-frame {
+        width: 100vw;
+        margin-left: calc(50% - 50vw);
+        margin-right: 0;
+    }
+
+    .photo-frame__paper {
+        width: 100%;
+    }
+
+    .photo-frame img.hero-photo {
+        width: 100%;
+        height: auto;
+    }
+}
