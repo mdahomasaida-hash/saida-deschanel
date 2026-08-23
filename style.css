@@ -964,5 +964,90 @@ button {
     font-size: 24px;
   }
 }
+/* =========================================================
+   COHÉRENCE TYPOGRAPHIQUE — TOUT LE SITE
+   ========================================================= */
+
+/* ---------- GRANDS TITRES MANUSCRITS ---------- */
+
+#histoire h2,
+#lieu h2,
+#programme h2 {
+    font-size: 52px;
+    line-height: 1.05;
+    margin: 0 auto 28px;
+}
+
+
+/* ---------- TEXTES COURANTS ---------- */
+
+/* Notre histoire */
+#histoire p {
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+/* Château de Vaugrigneuse */
+#lieu p {
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+/* Programme */
+#programme p {
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+
+/* ---------- SOUS-TITRES DU PROGRAMME ---------- */
+
+#programme h3 {
+    font-size: 24px;
+    line-height: 1.3;
+    margin-top: 32px;
+    margin-bottom: 14px;
+}
+
+
+/* ---------- FAQ ---------- */
+
+#faq p {
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+
+/* ---------- MOT DE FIN ---------- */
+
+#fin p {
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+
+/* ---------- MOBILE ---------- */
+
+@media (max-width: 600px) {
+
+    #histoire h2,
+    #lieu h2,
+    #programme h2 {
+        font-size: 52px;
+    }
+
+    #histoire p,
+    #lieu p,
+    #programme p,
+    #faq p,
+    #fin p {
+        font-size: 17px;
+        line-height: 1.6;
+    }
+
+    #programme h3 {
+        font-size: 24px;
+    }
+}
 
 
