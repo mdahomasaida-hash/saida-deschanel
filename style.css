@@ -384,6 +384,39 @@ h1 .ampersand {
     font-weight: 700;
 }
 
+/* =========================================
+   PROGRAMME — TEXTE UNIFORMISÉ
+   ========================================= */
+
+#programme p {
+  font-size: 17px;
+  line-height: 1.65;
+}
+
+/* Les titres du programme restent plus grands */
+#programme h3 {
+  font-size: 24px;
+  line-height: 1.25;
+}
+
+/* Si certains titres sont en strong plutôt qu'en h3 */
+#programme p strong {
+  font-size: inherit;
+}
+
+/* Version mobile */
+@media (max-width: 600px) {
+  #programme p {
+    font-size: 17px;
+    line-height: 1.65;
+  }
+
+  #programme h3 {
+    font-size: 24px;
+  }
+}
+
+
 /* =========================
    VERSION MOBILE
 ========================= */
