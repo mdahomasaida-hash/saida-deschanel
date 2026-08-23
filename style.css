@@ -530,6 +530,18 @@ body.menu-open .site-menu {
     box-shadow: none;
     object-fit: contain;
 }
+/* Hiérarchie des textes */
+.placeholder-section p {
+  font-size: 20px;
+  line-height: 1.45;
+}
+
+.placeholder-section h3 {
+  font-family: "Brittany", "Snell Roundhand", "Brush Script MT", cursive;
+  font-size: 26px;
+  font-weight: 400;
+  line-height: 1.1;
+}
 
 /* Sur mobile : la photo touche vraiment les deux bords de l'écran */
 @media (max-width: 600px) {
