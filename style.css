@@ -559,6 +559,21 @@ body.menu-open .site-menu {
         width: 100%;
         height: auto;
     }
+
+  /* Dresscode */
+.dresscode-section {
+    padding: 60px 15px;
+}
+
+.dresscode-text {
+    max-width: 100%;
+}
+
+.dresscode-palette img {
+    width: 100%;
+    max-width: 360px;
+    height: auto;
+}
 }
 /* =========================
    TEXTE DU SITE EN BLANC
