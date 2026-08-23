@@ -726,6 +726,44 @@ body.menu-open .site-menu {
     max-width: 360px;
     height: auto;
 }
+.lodging-section {
+    padding: 55px 10px;
+  }
+
+  .lodging-header {
+    margin-bottom: 30px;
+  }
+
+  .lodging-header p {
+    padding: 0 10px;
+  }
+
+  .lodging-carousel {
+    gap: 5px;
+  }
+
+  .lodging-card {
+    padding: 5px;
+  }
+
+  .lodging-card-content {
+    padding: 30px 18px;
+  }
+
+  .lodging-card h3 {
+    font-size: 23px;
+  }
+
+  .lodging-arrow {
+    width: 36px;
+    height: 36px;
+    font-size: 25px;
+  }
+
+  .lodging-button {
+    max-width: 280px;
+  }
+
 }
 /* =========================
    TEXTE DU SITE EN BLANC
