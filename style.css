@@ -23,8 +23,11 @@ html {
 body {
   margin: 0;
   min-width: 320px;
-  background: var(--cream);
-  color: var(--brown);
+  color: var(--ink);
+  background:
+    radial-gradient(circle at 15% 12%, rgba(255,255,255,.13), transparent 28%),
+    radial-gradient(circle at 90% 78%, rgba(255,170,195,.20), transparent 30%),
+    linear-gradient(145deg, #ed642f 0%, #e65c55 48%, #cf7896 100%);
   font-family: "Cormorant Garamond", Georgia, serif;
 }
 
@@ -39,7 +42,7 @@ body {
 .hero {
   position: relative;
   min-height: 100svh;
-  padding: 28px 20px 50px;
+  padding: 28px 32px 50px;
   display: flex;
   justify-content: center;
   align-items: center;
