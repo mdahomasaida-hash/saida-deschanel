@@ -1050,4 +1050,68 @@ button {
     }
 }
 
+/* =========================================
+   DÉGRADÉ PRINCIPAL DU SITE
+   ========================================= */
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  background: linear-gradient(
+    135deg,
+    #d9005b 0%,
+    #ed3150 45%,
+    #f35a43 72%,
+    #ff6a1a 100%
+  );
+}
+
+
+/* Le contenu du site laisse apparaître
+   le dégradé général */
+body {
+  background-attachment: fixed;
+}
+
+
+/* Toutes les grandes sections utilisent
+   le même dégradé */
+section,
+.next-section {
+  background: transparent !important;
+}
+
+
+/* =========================================
+   MENU
+   ========================================= */
+
+nav,
+.menu,
+header {
+  background: linear-gradient(
+    135deg,
+    #d9005b 0%,
+    #ed3150 45%,
+    #f35a43 72%,
+    #ff6a1a 100%
+  );
+}
+
+
+/* =========================================
+   ÉVITE LES BLOCS BLANCS / UNIS
+   ========================================= */
+
+#histoire,
+#lieu,
+#programme,
+#rsvp,
+#faq,
+#fin {
+  background: transparent !important;
+}
+
 
