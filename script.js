@@ -86,4 +86,35 @@ if (discoverButton) {
       });
     }
   });
+
+  /* =========================
+   CARROUSEL OÙ LOGER
+========================= */
+
+const lodgingTrack = document.querySelector('.lodging-track');
+const lodgingPrev = document.querySelector('.lodging-arrow--prev');
+const lodgingNext = document.querySelector('.lodging-arrow--next');
+
+if (lodgingTrack && lodgingPrev && lodgingNext) {
+
+  const getCardWidth = () => {
+    const card = lodgingTrack.querySelector('.lodging-card');
+    return card ? card.offsetWidth : lodgingTrack.clientWidth;
+  };
+
+  lodgingNext.addEventListener('click', () => {
+    lodgingTrack.scrollBy({
+      left: getCardWidth(),
+      behavior: 'smooth'
+    });
+  });
+
+  lodgingPrev.addEventListener('click', () => {
+    lodgingTrack.scrollBy({
+      left: -getCardWidth(),
+      behavior: 'smooth'
+    });
+  });
+
+}
 }
