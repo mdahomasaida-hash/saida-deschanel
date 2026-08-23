@@ -582,3 +582,41 @@ button {
   color: #ffffff !important;
 }
 
+/* =========================
+   DRESSCODE
+   ========================= */
+
+.dresscode-section {
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.dresscode-section .section-kicker {
+  margin-bottom: 20px;
+}
+
+.dresscode-section h2 {
+  margin-bottom: 35px;
+}
+
+.dresscode-text {
+  max-width: 750px;
+  margin: 0 auto 45px;
+  line-height: 1.6;
+}
+
+.dresscode-palette {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.dresscode-palette img {
+  display: block;
+  width: 100%;
+  max-width: 420px;
+  height: auto;
+  margin: 0 auto;
+}
+
