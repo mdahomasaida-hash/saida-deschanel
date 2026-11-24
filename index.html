@@ -1,465 +1,325 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#ed6741">
-<meta name="description" content="Le mariage de Saïda & Deschanel — 5 juin 2027">
-<title>Saïda & Deschanel — 5 juin 2027</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saida & Deschanel — 5 Juin 2027</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<main class="site">
-<section class="hero" id="accueil">
-<div class="hero__glow" aria-hidden="true"></div>
-<div class="hero__content">
-<header class="hero__top">
-<span class="eyebrow">Notre grand jour</span>
-<button class="menu-button" type="button" aria-label="Ouvrir le menu" aria-expanded="false"><span></span><span></span></button>
-</header>
-  <nav class="site-menu">
-  <a href="#accueil">Accueil</a>
-  <a href="#rsvp">RSVP</a>
-  <a href="#lieu">Le lieu</a>
-  <a href="#programme">Le grand jour</a>
-</nav>
-<p class="hero__date">Samedi 5 juin 2027</p>
-<h1><span>Saïda</span><span class="ampersand">&amp;</span><span>Deschanel</span></h1>
-<p class="hero__place">Vaugrigneuse · Île-de-France</p>
-<img src="Illu Saida Deschanel.jpg" alt="Saïda & Deschanel" class="hero-photo">
-<p class="hero__intro">
-Après quelques années, deux enfants, nous avons décidé de nous marier.
-<span> Et cette fois, nous avons besoin de vous pour célébrer ça avec nous sous les couleurs d'un couché de soleil tropical ♡</span>
-</p>
-<div class="countdown" aria-label="Compte à rebours jusqu'au mariage">
-<div><strong id="days">—</strong><span>jours</span></div>
-<div><strong id="hours">—</strong><span>heures</span></div>
-<div><strong id="minutes">—</strong><span>minutes</span></div>
-<div><strong id="seconds">—</strong><span>secondes</span></div>
-</div>
-<a class="outline-button" href="#rsvp">Confirmer ma présence</a>
-<a class="scroll-cue" href="#rsvp" aria-label="Découvrir la suite"><span>Découvrir</span><i></i></a>
-</div>
-</section>
- <section id="histoire" class="next-section">
-      <p class="section-kicker">Notre histoire</p>
-      <h2>Notre histoire</h2>
 
-      <p>
-        En 2010, nos chemins se croisent sur les bancs de l'école. 
-        À l'époque, personne n'aurait parié que cette rencontre nous mènerait jusqu'ici… et nous non plus !
-      </p>
+    <!-- NAVIGATION -->
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="#accueil" class="logo">S<span>&</span>D</a>
+            <button class="menu-toggle" aria-label="Ouvrir le menu">
+                <span></span><span></span><span></span>
+            </button>
+            <nav class="nav-links">
+                <a href="#accueil">Accueil</a>
+                <a href="#histoire">Notre Histoire</a>
+                <a href="#mariage">Le Mariage</a>
+                <a href="#programme">Programme</a>
+                <a href="#infos">Infos Pratiques</a>
+                <a href="#faq">FAQ</a>
+                <a href="#rsvp" class="nav-cta">RSVP</a>
+            </nav>
+        </div>
+    </header>
 
-      <p>
-        Il faudra attendre 2019 pour que l'histoire commence vraiment.
-        Depuis, nous avançons ensemble, avec une belle équipe que nous construisons jour après jour.
-      </p>
+    <!-- HERO SECTION -->
+    <section id="accueil" class="hero">
+        <div class="hero-bg">
+            <img src="assets/photos/chateau-vaugrigneuse-lieu-chic-boheme-champetre-mariages-seminaires-essonne-ile-de-france-639w.jpg" alt="Château de Vaugrigneuse">
+            <div class="hero-overlay"></div>
+        </div>
 
-      <p>
-        <strong>5 juin 2027 : prochain chapitre.</strong><br>
-        Et cette fois, nous voulons l'écrire avec vous.
-      </p>
+        <!-- Éléments graphiques flottants au scroll -->
+        <img src="assets/feuillages/06_Front_Palmier.png" alt="" class="decor decor-top-right parallax" data-speed="-0.15">
+        <img src="assets/formes/05_Demi_Cercle_Fuchsia.svg" alt="" class="decor decor-bottom-left">
+        <img src="assets/fleurs/01_Hibiscus_Fuchsia.png" alt="" class="decor decor-hero-flower parallax" data-speed="0.1">
+
+        <div class="hero-content reveal">
+            <p class="subtitle-caps">NOTRE MARIAGE</p>
+            <h1 class="main-title">Saida <span class="ampersand">&</span> Deschanel</h1>
+            <p class="wedding-date">5 JUIN 2027</p>
+            <p class="intro-quote">
+                « Après quelques années, deux enfants, nous avons décidé de nous marier. Nous serions ravis de célébrer ça avec vous sous les couleurs d'un coucher de soleil ♡ »
+            </p>
+        </div>
     </section>
-<section class="placeholder-section" id="rsvp">
-<p class="section-kicker">RSVP</p>
 
-<h2>Votre présence est notre plus beau cadeau</h2>
-
-<p>
-  Afin de nous permettre d'organiser cette journée au mieux,
-  merci de nous confirmer votre présence avant le 5 mars 2027.
-</p>
-<p>
-  <strong>Répondez avant le 5 mars 2027</strong>
-</p>
-
-<p>
-  Et petit rappel : après cette date, les mariés risquent de commencer à paniquer. 😅
-</p>
-</section>
-  <section id="lieu" class="next-section">
-
-  <p class="section-kicker">Le lieu</p>
-
-  <h2>Château de Vaugrigneuse</h2>
-
-  <p>
-    Nous aurons le plaisir de vous retrouver au
-    <strong>Château de Vaugrigneuse</strong>.
-  </p>
-
-  <p>
-    1 rue de Vaugrigneuse<br>
-    91530 Saint-Chéron
-  </p>
-
-  <p>
-    Un parking sera disponible sur place.
-  </p>
-
-</section>
-<section id="programme" class="next-section">
-
-  <p class="section-kicker">Le grand jour</p>
-
-  <h2>Le programme</h2>
-
-  <p>
-    Une journée, plusieurs étapes, et surtout beaucoup de choses à manger. On vous laisse découvrir le programme.
-  </p>
-
-  <div class="programme-item">
-    <h3>Le Oui ✒️ </h3>
-    <p>Le grand moment est arrivé ! Retrouvons-nous pour le passage officiel devant le maire.</p>
-  </div>
-
-  <div class="programme-item">
-    <h3>L'Emotion 💓 </h3>
-    <p>Retrouvez-nous ensuite au Château pour notre cérémonie laïque où nous échangerons nos voeux.</p>
-  </div>
-
-  <div class="programme-item">
-    <h3> Les Souvenirs 📸 </h3>
-    <p> Sortez vos plus beaux sourires pour immortaliser ce moment lors de la séance photo.</p>
-  </div>
-
-  <div class="programme-item">
-    <h3>Le Toast 🍹 </h3>
-    <p>Place aux rafraîchissements et aux bouchées gourmandes pour célébrer nos premiers pas de mariés.</p>
-  </div>
-
-  <div class="programme-item">
-    <h3>Le Festin 🍴</h3>
-    <p> Passez à table pour partager un délicieux dîner fait de partage et de convivialité.</p>
-  </div>
-  
-  <div class="programme-item">
-    <h3> La Fête 🪩</h3>
-    <p> Ouverture du bal suivi de musique jusqu'au bout de la nuit. </p>
-  </div>
-
-   <div class="programme-item">
-    <h3> Le Brunch 🍳</h3>
-    <p> Prolongons la magie autour d'un brunch décontracté pour partager un dernier moment ensemble et faire le plein de souvenirs.
- <strong> <br> DRESSCODE : <br> Tous en blanc 🤍 </strong><br>
-  </div>
-
-</section>
-
-<section class="dresscode-section" id="dresscode">
-
-  <p class="section-kicker">DRESSCODE</p>
-
-  <h2>Sunset des îles</h2>
-
-  <p class="dresscode-text">
-    Pour accompagner l'ambiance de notre journée, nous vous invitons à jouer le jeu avec nous.
-    En total look ou par petite touche, faites-vous plaisir !
-  </p>
-
-  <div class="dresscode-palette">
-    <img src="dresscode-palette-2.jpg" alt="Palette de couleurs du dresscode : rose, corail, orange, vert et jaune">
-  </div>
-
-</section>
-
-<!-- =========================
-     OÙ LOGER
-========================= -->
-
-<section class="lodging-section" id="ou-loger">
-
-  <div class="lodging-header">
-    <span class="section-kicker">OÙ LOGER</span>
-
-    <h2>Où loger ?</h2>
-
-    <p>
-      Vous venez de loin et souhaitez profiter pleinement de la soirée
-      sans vous soucier du trajet retour ? Nous avons sélectionné quelques
-      jolies adresses à proximité du Château de Vaugrigneuse.
-      Si vous comptez passer la nuit sur place, nous vous conseillons de
-      réserver votre chambre dès que possible tant qu’il y a encore de la dispo.
-    </p>
-  </div>
-
-  <div class="lodging-carousel">
-
-    <button class="lodging-arrow lodging-arrow--prev" type="button" aria-label="Lieu précédent">
-      ‹
-    </button>
-
-    <div class="lodging-track">
-
-      <!-- L'AUBERGE -->
-      <article class="lodging-card">
-
-        <div class="lodging-card-content">
-
-          <span class="lodging-label">À proximité</span>
-
-          <h3>L’Auberge 91530</h3>
-
-          <p class="lodging-address">
-            1 route de Vaugrigneuse<br>
-            91530 Le Val-Saint-Germain
-          </p>
-          <div class="lodging-map"> 
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2639.7446907901963!2d2.0986790759444314!3d48.576438520507686!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e5d2e0ee5ab075%3A0xefbf733665cccada!2sL'Auberge%2091530!5e0!3m2!1sfr!2sfr!4v1787499355481!5m2!1sfr!2sfr" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
-          </div>
-          <div class="lodging-actions">
-
-            <a
-              class="lodging-button lodging-button--google"
-              href="GOOGLE_MAPS_AUBERGE"
-              target="_blank"
-              rel="noopener"
-            >
-              Voir sur Google Maps
-            </a>
-
-            <a
-              class="lodging-button lodging-button--availability"
-              href="GOOGLE_TRAVEL_AUBERGE"
-              target="_blank"
-              rel="noopener"
-            >
-              Vérifier la disponibilité
-            </a>
-
-          </div>
-
+    <!-- COMPTE À REBOURS -->
+    <section class="countdown-section">
+        <div class="container reveal">
+            <div id="countdown" class="countdown-grid">
+                <div class="time-box">
+                    <span id="days">000</span>
+                    <small>JOURS</small>
+                </div>
+                <div class="time-sep"></div>
+                <div class="time-box">
+                    <span id="hours">00</span>
+                    <small>HEURES</small>
+                </div>
+                <div class="time-sep"></div>
+                <div class="time-box">
+                    <span id="minutes">00</span>
+                    <small>MINUTES</small>
+                </div>
+                <div class="time-sep"></div>
+                <div class="time-box">
+                    <span id="seconds">00</span>
+                    <small>SECONDES</small>
+                </div>
+            </div>
+            <a href="#rsvp" class="btn-primary">CONFIRMER MA PRÉSENCE →</a>
         </div>
+    </section>
 
-      </article>
+    <!-- NOTRE HISTOIRE -->
+    <section id="histoire" class="story-section">
+        <img src="assets/feuillages/05_Palmier_Arque.png" alt="" class="decor decor-story-right reveal-right">
+        <img src="assets/formes/06_Demi_Cercle_Orange.svg" alt="" class="decor decor-story-left">
 
+        <div class="container split-grid">
+            <div class="story-image-wrapper reveal-left">
+                <div class="arch-frame">
+                    <img src="assets/photos/IMG_20211118_204356.jpg" alt="Saida et Deschanel">
+                </div>
+                <img src="assets/fleurs/03_Hibiscus_Corail.png" alt="" class="flower-badge">
+            </div>
 
-      <!-- LE MOULIN BLEU -->
-      <article class="lodging-card">
-
-        <div class="lodging-card-content">
-
-          <span class="lodging-label">À proximité</span>
-
-          <h3>Le Moulin Bleu</h3>
-
-          <p class="lodging-address">
-            87 rue du Pont-Rué<br>
-            91410 Saint-Cyr-sous-Dourdan
-          </p>
-          <div class="lodging-map">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2640.4192517139036!2d2.0484344759436137!3d48.56351842141304!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e42dde164fa27d%3A0x785309638abf72e8!2sLe%20Moulin%20Bleu!5e0!3m2!1sfr!2sfr!4v1787499463752!5m2!1sfr!2sfr" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+            <div class="story-text reveal">
+                <span class="signature-accent">Depuis 2010</span>
+                <h2 class="section-title">Notre histoire</h2>
+                <p>
+                    En 2010, nos chemins se croisent sur les bancs de l'école. À l'époque, personne n'aurait parié que cette rencontre nous mènerait jusqu'ici… et nous non plus !
+                </p>
+                <p>
+                    Il faudra attendre une dizaine d'années pour que notre histoire commence. Depuis, nous avançons ensemble, avec une belle famille que nous construisons jour après jour.
+                </p>
+                <p class="highlight-chapter">5 juin 2027 : prochain chapitre.</p>
+            </div>
         </div>
+    </section>
 
-          <div class="lodging-actions">
+    <!-- LE MARIAGE (LIEUX & INFOS CLÉS) -->
+    <section id="mariage" class="wedding-info-section">
+        <div class="container split-grid reverse-mobile">
+            <div class="wedding-details reveal">
+                <h2 class="section-title">Le mariage</h2>
+                <div class="key-facts">
+                    <div class="fact-item">
+                        <img src="assets/pictos/10_Date.svg" alt="Date" class="picto">
+                        <div>
+                            <strong>Samedi 5 juin 2027</strong>
+                            <span>À partir de 14h00</span>
+                        </div>
+                    </div>
+                    <div class="fact-item">
+                        <img src="assets/pictos/09_Localisation.svg" alt="Lieu" class="picto">
+                        <div>
+                            <strong>Mairie de Saint-Chéron</strong>
+                            <span>Puis Château de Vaugrigneuse (91)</span>
+                        </div>
+                    </div>
+                </div>
+                <img src="assets/ornements/02_Separateur_Hibiscus_Lineaire.svg" alt="" class="linear-divider">
+            </div>
 
-            <a
-              class="lodging-button lodging-button--google"
-              href="GOOGLE_MAPS_MOULIN"
-              target="_blank"
-              rel="noopener"
-            >
-              Voir sur Google Maps
-            </a>
-
-            <a
-              class="lodging-button lodging-button--availability"
-              href="GOOGLE_TRAVEL_MOULIN"
-              target="_blank"
-              rel="noopener"
-            >
-              Vérifier la disponibilité
-            </a>
-
-          </div>
-
+            <div class="venue-image-wrapper reveal-right">
+                <div class="arch-horizontal">
+                    <img src="assets/photos/chateau-vaugrigneuse-3543814393c5-639x395.jpg" alt="Château de Vaugrigneuse">
+                </div>
+                <img src="assets/fleurs/02_Hibiscus_Orange.png" alt="" class="flower-venue">
+            </div>
         </div>
+    </section>
 
-      </article>
+    <!-- LE PROGRAMME -->
+    <section id="programme" class="program-section">
+        <img src="assets/feuillages/10_Oiseau_Paradis.png" alt="" class="decor decor-prog-left reveal-left">
+        <img src="assets/formes/07_Forme_Organique_Corail.svg" alt="" class="decor decor-prog-right">
 
+        <div class="container">
+            <h2 class="section-title center reveal">Le programme</h2>
+            <div class="timeline-grid">
+                <div class="timeline-card reveal" style="--delay: 0.1s">
+                    <div class="picto-circle">
+                        <img src="assets/pictos/01_Ceremonie.svg" alt="Cérémonie Civile">
+                    </div>
+                    <span class="time">14h00</span>
+                    <h3>Le Oui</h3>
+                    <p class="place">Mairie de Saint-Chéron</p>
+                    <p class="desc">Le grand moment est arrivé ! Retrouvons-nous pour le passage officiel devant le maire et le début des festivités.</p>
+                </div>
 
-      <!-- LE LOGIS D'ARNIÈRE -->
-      <article class="lodging-card">
+                <div class="timeline-card reveal" style="--delay: 0.2s">
+                    <div class="picto-circle">
+                        <img src="assets/pictos/01_Ceremonie.svg" alt="Cérémonie Laïque">
+                    </div>
+                    <span class="time">16h00</span>
+                    <h3>L'Émotion</h3>
+                    <p class="place">Château de Vaugrigneuse</p>
+                    <p class="desc">Rejoignez-nous dans le parc du château pour une cérémonie intime, entourée de nos proches, de rires et de quelques larmes de joie.</p>
+                </div>
 
-        <div class="lodging-card-content">
+                <div class="timeline-card reveal" style="--delay: 0.3s">
+                    <div class="picto-circle">
+                        <img src="assets/pictos/08_RSVP.svg" alt="Photos">
+                    </div>
+                    <span class="time">17h00</span>
+                    <h3>Les Souvenirs</h3>
+                    <p class="place">Château de Vaugrigneuse</p>
+                    <p class="desc">Un moment pour immortaliser cette journée ensemble ! Sortez vos plus beaux sourires pour les photos de groupe et de famille.</p>
+                </div>
 
-          <span class="lodging-label">À proximité</span>
+                <div class="timeline-card reveal" style="--delay: 0.4s">
+                    <div class="picto-circle">
+                        <img src="assets/pictos/02_Cocktail.svg" alt="Cocktail">
+                    </div>
+                    <span class="time">17h30</span>
+                    <h3>Le Toast</h3>
+                    <p class="place">Château de Vaugrigneuse</p>
+                    <p class="desc">Place aux rafraîchissements, aux bulles et aux bouchées gourmandes pour célébrer nos premiers pas de mariés.</p>
+                </div>
 
-          <h3>Le Logis d’Arnière</h3>
+                <div class="timeline-card reveal" style="--delay: 0.5s">
+                    <div class="picto-circle">
+                        <img src="assets/pictos/03_Diner.svg" alt="Repas">
+                    </div>
+                    <span class="time">20h00</span>
+                    <h3>Le Festin</h3>
+                    <p class="place">Château de Vaugrigneuse</p>
+                    <p class="desc">Passez à table pour partager un délicieux dîner fait de partage, de surprises et de convivialité.</p>
+                </div>
 
-          <p class="lodging-address">
-            1 rue du Pont-Rué<br>
-            91410 Saint-Cyr-sous-Dourdan
-          </p>
-          <div class="lodging-map"
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2640.231719593627!2d2.0286331862829368!3d48.56711054715693!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e42d09ea0bf557%3A0x8e949229ec1e40ca!2sLe%20Logis%20d'Arni%C3%A8re!5e0!3m2!1sfr!2sfr!4v1787499561766!5m2!1sfr!2sfr" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
-          </div>
-
-          <div class="lodging-actions">
-
-            <a
-              class="lodging-button lodging-button--google"
-              href="GOOGLE_MAPS_LOGIS"
-              target="_blank"
-              rel="noopener"
-            >
-              Voir sur Google Maps
-            </a>
-
-            <a
-              class="lodging-button lodging-button--availability"
-              href="GOOGLE_TRAVEL_LOGIS"
-              target="_blank"
-              rel="noopener"
-            >
-              Vérifier la disponibilité
-            </a>
-
-          </div>
-
+                <div class="timeline-card reveal" style="--delay: 0.6s">
+                    <div class="picto-circle">
+                        <img src="assets/pictos/04_Soiree_Danse.svg" alt="Soirée">
+                    </div>
+                    <span class="time">22h00</span>
+                    <h3>La Fête</h3>
+                    <p class="place">Château de Vaugrigneuse</p>
+                    <p class="desc">Ouverture du bal et piste de danse enflammée ! Sortez vos meilleures chaussures pour faire la fête jusqu'au bout de la nuit.</p>
+                </div>
+            </div>
         </div>
+    </section>
 
-      </article>
+    <!-- INFOS PRATIQUES : LOGEMENT & DRESSCODE -->
+    <section id="infos" class="infos-section">
+        <img src="assets/feuillages/01_Monstera.png" alt="" class="decor decor-infos-right reveal-right">
 
-    </div>
+        <div class="container">
+            <h2 class="section-title center reveal">Infos pratiques</h2>
 
-    <button class="lodging-arrow lodging-arrow--next" type="button" aria-label="Lieu suivant">
-      ›
-    </button>
+            <div class="infos-grid">
+                <!-- DRESS CODE -->
+                <div class="info-card dresscode-card reveal">
+                    <h3>Dress Code : Coucher de soleil</h3>
+                    <p>
+                        Pour accompagner l’ambiance, nous vous invitons à jouer le jeu avec nous : <strong>rose, orange, vert olive et beige</strong>. Une couleur, deux couleurs ou les quatre ! En total look ou par petites touches. Faites-vous plaisir !
+                    </p>
+                    <div class="palette-dots">
+                        <span class="dot" style="background-color: #A30D4D;" title="Fuchsia"></span>
+                        <span class="dot" style="background-color: #FA655E;" title="Corail"></span>
+                        <span class="dot" style="background-color: #F58A20;" title="Orange"></span>
+                        <span class="dot" style="background-color: #3F4D0A;" title="Vert olive"></span>
+                        <span class="dot" style="background-color: #E9BD91;" title="Beige sable"></span>
+                    </div>
+                </div>
 
-  </div>
+                <!-- LOGEMENTS -->
+                <div class="info-card lodging-card reveal">
+                    <div class="card-header">
+                        <img src="assets/pictos/05_Hebergement.svg" alt="Hébergement" class="picto">
+                        <h3>Où dormir ?</h3>
+                    </div>
+                    <p>Quelques gîtes et chambres d'hôtes se trouvent autour du domaine :</p>
+                    <ul class="lodging-list">
+                        <li>
+                            <strong>Maison L&A</strong> (Angervilliers)
+                            <a href="https://www.google.com/maps/search/?api=1&query=21+Avenue+de+la+Jousserie,+91470+Angervilliers" target="_blank" rel="noopener">Voir sur la carte →</a>
+                        </li>
+                        <li>
+                            <strong>La Villa Rochette</strong> (Forges-les-Bains)
+                            <a href="https://www.google.com/maps/search/?api=1&query=13+Rue+d%27Adelaiau,+91470+Forges-les-Bains" target="_blank" rel="noopener">Voir sur la carte →</a>
+                        </li>
+                        <li>
+                            <strong>L'Auberge 91530</strong> (Le Val-Saint-Germain)
+                            <a href="https://www.google.com/maps/search/?api=1&query=1+Route+de+Vaugrigneuse,+91530+Le+Val-Saint-Germain" target="_blank" rel="noopener">Voir sur la carte →</a>
+                        </li>
+                        <li>
+                            <strong>Le Logis d’Arnières</strong>
+                            <a href="https://www.google.com/maps/place//data=!4m2!3m1!1s0x47e42d09ea0bf557:0x8e949229ec1e40ca" target="_blank" rel="noopener">Voir sur la carte →</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
 
-</section>
+    <!-- FAQ -->
+    <section id="faq" class="faq-section">
+        <div class="container narrow">
+            <h2 class="section-title center reveal">Questions fréquentes</h2>
+            <div class="accordion reveal">
+                <div class="accordion-item">
+                    <button class="accordion-header">À quelle heure dois-je arriver ? <span>+</span></button>
+                    <div class="accordion-body">
+                        <p>La cérémonie civile débute à 14h00 à la Mairie de Saint-Chéron (Parc des Tourelles), puis nous nous retrouverons au Château de Vaugrigneuse à 16h00 pour la cérémonie laïque et la suite des festivités.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header">Dois-je choisir mon menu ? <span>+</span></button>
+                    <div class="accordion-body">
+                        <p>Oui ! Vous pourrez choisir votre entrée et votre plat directement lors de votre confirmation de présence (RSVP).</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header">Les enfants sont-ils les bienvenus ? <span>+</span></button>
+                    <div class="accordion-body">
+                        <p>Absolument ! Pour vous permettre de profiter de la cérémonie et festoyer l'esprit léger (notamment avec la présence d'un étang sur le domaine), nous prévoyons de faire appel à une nounou. Une participation sera demandée aux parents intéressés : pensez à nous l'indiquer lors de votre réponse !</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header">Où puis-je dormir ? <span>+</span></button>
+                    <div class="accordion-body">
+                        <p>Quelques gîtes et chambres d'hôtes se trouvent à proximité du château (listés juste au-dessus). N'hésitez pas à nous contacter si vous avez besoin de conseils supplémentaires.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<!-- =========================
-     FAQ
-========================= -->
+    <!-- RSVP BANNER -->
+    <section id="rsvp" class="rsvp-section">
+        <img src="assets/formes/06_Demi_Cercle_Orange.svg" alt="" class="decor rsvp-shape-right">
+        <img src="assets/fleurs/04_Hibiscus_Ivoire.png" alt="" class="decor rsvp-flower-left reveal-left">
 
-<section class="faq-section" id="faq">
+        <div class="container center reveal">
+            <h2 class="rsvp-title">RSVP</h2>
+            <p class="rsvp-subtitle">SEREZ-VOUS DES NÔTRES ?</p>
+            <p class="rsvp-text">Merci de nous confirmer votre présence ainsi que vos choix de menu avant le 1er avril 2027.</p>
+            <!-- Remplace le "#" ci-dessous par le lien de ton formulaire Tally / Google Forms -->
+            <a href="#" target="_blank" class="btn-ivory">JE CONFIRME MA PRÉSENCE →</a>
+        </div>
+    </section>
 
-  <div class="section-kicker">Quelques questions pratiques</div>
+    <!-- FOOTER -->
+    <footer>
+        <div class="container center">
+            <p class="footer-monogram">Saida & Deschanel</p>
+            <p class="footer-date">5 Juin 2027 • Saint-Chéron & Château de Vaugrigneuse</p>
+        </div>
+    </footer>
 
-  <h2>FAQ</h2>
-
-  <div class="faq-list">
-
-    <details class="faq-item">
-      <summary>À quelle heure dois-je arriver ?</summary>
-      <div class="faq-answer">
-        <p>
-          La cérémonie civile débute à 14h30 au Parc des Tourelles à Saint-Chéron.
-        </p>
-      </div>
-    </details>
-
-    <details class="faq-item">
-      <summary>Et après la mairie ?</summary>
-      <div class="faq-answer">
-        <p>
-          Nous nous retrouverons au Château de Vaugrigneuse pour poursuivre les festivités.
-        </p>
-      </div>
-    </details>
-
-    <details class="faq-item">
-      <summary>Quel est le dress code ?</summary>
-      <div class="faq-answer">
-        <p>
-          Rose, corail, orange et vert, vanille.
-          Une couleur, deux couleurs ou les cinq : faites-vous plaisir !
-        </p>
-      </div>
-    </details>
-
-    <details class="faq-item">
-      <summary>Dois-je choisir mon menu ?</summary>
-      <div class="faq-answer">
-        <p>
-          Oui. Vous pourrez choisir votre entrée et votre plat directement lors de votre RSVP.
-        </p>
-      </div>
-    </details>
-
-    <details class="faq-item">
-      <summary>Les enfants sont-ils les bienvenus ?</summary>
-      <div class="faq-answer">
-        <p>
-          Absolument ! Pour vous permettre de profiter de la cérémonie et festoyer
-          l'esprit léger (notamment avec la présence d'un étang sur le domaine),
-          nous prévoyons de faire appel à une nounou.
-        </p>
-
-        <p>
-          Une participation sera demandée aux parents intéressés :
-          pensez à nous l'indiquer lors de votre réponse !
-        </p>
-      </div>
-    </details>
-
-    <details class="faq-item">
-      <summary>Jusqu'à quand dois-je répondre ?</summary>
-      <div class="faq-answer">
-        <p>
-          Merci de confirmer votre présence avant le 5 mars 2027.
-        </p>
-      </div>
-    </details>
-
-    <details class="faq-item">
-      <summary>Où puis-je dormir ?</summary>
-      <div class="faq-answer">
-        <p>
-          Nous avons sélectionné quelques hébergements à proximité du château.
-          Les réservations sont à effectuer directement auprès des établissements.
-        </p>
-      </div>
-    </details>
-
-  </div>
-
-</section>
-
-<!-- =========================
-     12. MOT DE FIN
-========================= -->
-
-<section class="final-section" id="mot-de-fin">
-
-  <div class="section-kicker">À très bientôt...</div>
-
-  <h2>À très bientôt...</h2>
-
-  <div class="final-text">
-    <p>
-      Une journée de fête, à boire et à manger, de la musique,
-      des couleurs et, on l'espère, quelques chorégraphies endiablées.
-    </p>
-
-    <p>
-      Nous avons hâte de partager cette journée avec vous.
-    </p>
-  </div>
-
-  <div class="final-names">
-    Saïda &amp; Deschanel
-  </div>
-
-  <div class="final-date">
-    5 juin 2027
-  </div>
-
-</section>
-
-
-  
-</main>
-<script src="script.js"></script>
-<script>
-document.querySelectorAll('.site-menu a').forEach(link => {
-  link.addEventListener('click', () => {
-    document.body.classList.remove('menu-open');
-  });
-});
-</script>
+    <script src="script.js"></script>
 </body>
 </html>
