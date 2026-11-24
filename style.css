@@ -1,1117 +1,786 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@400;500;600&display=swap');
-
 :root {
-  --orange: #ef6842;
-  --corail: #ed6b70;
-  --rose: #d97891;
-  --fuchsia: #b83d70;
-  --cream: #fff8f1;
-  --brown: #552b35;
-  --green: #6d8060;
-  --gold: #e9c47a;
-  --white: #fffaf7;
+    --fuchsia: #A30D4D;
+    --corail: #FA655E;
+    --orange: #F58A20;
+    --beige: #E9BD91;
+    --ivoire: #F7F1E7;
+    --olive: #3F4D0A;
+    --text-dark: #2C2A25;
+
+    --font-serif: 'Cormorant Garamond', Georgia, serif;
+    --font-sans: 'Montserrat', sans-serif;
+    --font-script: 'Brittany', 'Alex Brush', cursive;
 }
 
 * {
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 html {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
 body {
-  margin: 0;
-  min-width: 320px;
-  color: var(--ink);
-  background:
-    radial-gradient(circle at 15% 12%, rgba(255,255,255,.13), transparent 28%),
-    radial-gradient(circle at 90% 78%, rgba(255,170,195,.20), transparent 30%),
-    linear-gradient(145deg, #ed642f 0%, #e65c55 48%, #cf7896 100%);
-  font-family: "Cormorant Garamond", Georgia, serif;
-  text-align: center
+    background-color: var(--ivoire);
+    color: var(--text-dark);
+    font-family: var(--font-sans);
+    line-height: 1.6;
+    overflow-x: hidden;
 }
 
-.site {
-  overflow: hidden;
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 24px;
+    position: relative;
+    z-index: 2;
 }
 
-/* =========================
-   HERO
-========================= */
-
-.hero {
-  position: relative;
-  min-height: 100svh;
-  padding: 28px 32px 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  color: var(--white);
-
-  background: transparent;
-   
+.container.narrow {
+    max-width: 800px;
 }
 
-.hero__backdrop {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  background:
-    radial-gradient(
-      ellipse at center,
-      rgba(255,255,255,.08),
-      transparent 65%
-    );
-}
-
-.hero__content {
-  position: relative;
-  z-index: 2;
-  width: min(100%, 650px);
-}
-
-/* =========================
-   TOP
-========================= */
-
-.hero__top {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 35px;
-}
-
-.eyebrow {
-  font-size: 20px;
-  letter-spacing: .08em;
-}
-
-.menu-button {
-  width: 54px;
-  height: 54px;
-  border: 1px solid rgba(255,255,255,.75);
-  border-radius: 50%;
-  background: transparent;
-  display: grid;
-  place-content: center;
-  gap: 7px;
-  cursor: pointer;
-}
-
-.menu-button span {
-  width: 23px;
-  height: 1px;
-  display: block;
-  background: white;
-}
-.site-menu {
-  display: none;
-}
-
-.menu-open .site-menu {
-  display: flex;
-}
-.menu-open .hero__top a {
-  display: none;
-}
-/* =========================
-   TITRE
-========================= */
-
-.hero__date {
-  margin: 0 0 8px;
-  font-size: 22px;
-  letter-spacing: .08em;
-}
-
-h1 {
-  margin: 0;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: baseline;
-  gap: .12em;
-
-  font-family:
-    "Brittany",
-    "Snell Roundhand",
-    "Brush Script MT",
-    cursive;
-
-  font-weight: 400;
-  font-size: clamp(55px, 15vw, 105px);
-  line-height: .9;
-  text-shadow: 0 3px 15px rgba(80,25,20,.12);
-}
-
-h1 .ampersand {
-  font-size: .58em;
-}
-
-.hero__place {
-  margin: 18px 0 28px;
-  font-size: 21px;
-  letter-spacing: .07em;
-}
-
-/* =========================
-   PHOTO
-========================= */
-
-.photo-frame {
-  width: 100vw;
-  margin: 0;
-  padding: 0;
-  position: relative;
-  transform: none;
-}
-
-.photo-frame__backdrop {
-  display: none;
-}
-
-.photo-frame__paper {
-  width: 100%;
-  margin: 0;
-  padding: 0;
-}
-
-.photo-frame__paper img {
-  display: block;
-  width: 100%;
-  height: auto;
-  margin: 0;
-  padding: 0;
-}
-
-  background:
-    linear-gradient(
-      135deg,
-      rgba(255,245,236,.5),
-      rgba(194,91,112,.35)
-    );
-
-  filter: blur(24px);
-  opacity: .8;
-  transform: rotate(4deg) scale(1.04);
-}
-
-.photo-frame__paper {
-  position: relative;
-  padding: 10px;
-  background: rgba(255,248,242,.97);
-  box-shadow: 0 20px 40px rgba(91,34,28,.20);
-}
-
-.hero-photo {
-    display: block;
-    width: 100%;
-    height: auto;
-    object-fit: contain;
-}
-
-/* décor autour de la photo */
-
-.collage {
-  position: absolute;
-  z-index: 3;
-  color: #fff5ea;
-  text-shadow: 0 3px 8px rgba(80,25,20,.2);
-}
-
-.collage--flower {
-  left: -22px;
-  bottom: -25px;
-  font-size: 55px;
-  transform: rotate(-12deg);
-}
-
-.collage--spark {
-  right: -20px;
-  top: -22px;
-  font-size: 45px;
-  transform: rotate(14deg);
-}
-
-/* =========================
-   INTRO
-========================= */
-
-.hero__intro {
-  max-width: 520px;
-  margin: 0 auto 30px;
-  font-size: 22px;
-  line-height: 1.45;
-}
-
-.hero__intro span {
-  display: inline-block;
-  margin-top: 18px;
-  font-size: 23px;
-}
-
-/* =========================
-   COMPTE À REBOURS
-========================= */
-
-.countdown {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 10px;
-  max-width: 500px;
-  margin: 0 auto 30px;
-}
-
-.countdown div {
-  padding: 12px 4px;
-  border-top: 1px solid rgba(255,255,255,.55);
-  border-bottom: 1px solid rgba(255,255,255,.55);
-}
-
-.countdown strong,
-.countdown span {
-  display: block;
-}
-
-.countdown strong {
-  font-size: 30px;
-  line-height: 1;
-  font-weight: 600;
-}
-
-.countdown span {
-  margin-top: 6px;
-  font-family: "Montserrat", sans-serif;
-  font-size: 11px;
-  text-transform: uppercase;
-  letter-spacing: .08em;
-}
-
-/* =========================
-   BOUTON
-========================= */
-
-.outline-button {
-  display: inline-block;
-  padding: 14px 32px;
-
-  border: 1px solid rgba(255,255,255,.95);
-  border-radius: 999px;
-
-  color: white;
-  text-decoration: none;
-  font-size: 21px;
-
-  transition:
-    background .25s ease,
-    color .25s ease,
-    transform .25s ease;
-}
-
-.outline-button:hover,
-.outline-button:focus-visible {
-  background: white;
-  color: var(--corail);
-  transform: translateY(-2px);
-}
-
-/* =========================
-   DÉCOUVRIR
-========================= */
-
-.scroll-cue {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 7px;
-
-  margin-top: 28px;
-
-  color: white;
-  text-decoration: none;
-  font-size: 17px;
-}
-
-.scroll-cue i {
-  display: block;
-  width: 1px;
-  height: 30px;
-  background: rgba(255,255,255,.8);
-}
-
-/* =========================
-   NOTRE HISTOIRE
-========================= */
-
-#histoire {
-    padding: 90px 25px;
-    background: var(--coral);
-    color: white;
+.center {
     text-align: center;
 }
 
-#histoire .section-kicker {
-    margin-bottom: 18px;
-    font-size: 16px;
-    letter-spacing: 5px;
+/* NAVBAR */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(247, 241, 231, 0.92);
+    backdrop-filter: blur(8px);
+    z-index: 100;
+    border-bottom: 1px solid rgba(233, 189, 145, 0.4);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 14px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: var(--font-serif);
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--olive);
+    text-decoration: none;
+    letter-spacing: 2px;
+}
+
+.logo span {
+    color: var(--orange);
+}
+
+.nav-links {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--olive);
+    font-size: 0.78rem;
+    font-weight: 500;
     text-transform: uppercase;
-    font-weight: 400;
+    letter-spacing: 1.5px;
+    transition: color 0.3s;
 }
 
-#histoire h2 {
-    max-width: 800px;
-    margin: 0 auto 35px;
-    font-size: 54px;
+.nav-links a:hover {
+    color: var(--fuchsia);
+}
+
+.nav-links .nav-cta {
+    background: var(--fuchsia);
+    color: var(--ivoire);
+    padding: 8px 18px;
+    border-radius: 50px;
+}
+
+.nav-links .nav-cta:hover {
+    background: var(--olive);
+    color: var(--ivoire);
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.menu-toggle span {
+    width: 25px;
+    height: 2px;
+    background: var(--olive);
+}
+
+/* HERO */
+.hero {
+    position: relative;
+    min-height: 92vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 120px 20px 80px;
+    overflow: hidden;
+}
+
+.hero-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+}
+
+.hero-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(247, 241, 231, 0.86) 0%, rgba(247, 241, 231, 0.65) 50%, rgba(247, 241, 231, 0.95) 100%);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 3;
+    max-width: 720px;
+}
+
+.subtitle-caps {
+    font-size: 0.85rem;
+    letter-spacing: 4px;
+    color: var(--olive);
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.main-title {
+    font-family: var(--font-serif);
+    font-size: clamp(3.2rem, 7vw, 5.5rem);
+    font-weight: 400;
+    color: var(--olive);
     line-height: 1.05;
-    font-weight: 400;
+    margin-bottom: 16px;
 }
 
-/* Tout le texte courant a la même taille */
-#histoire p {
-    max-width: 760px;
-    margin: 0 auto 30px;
-    font-size: 22px;
-    line-height: 1.55;
-    font-weight: 400;
+.main-title .ampersand {
+    color: var(--orange);
+    font-style: italic;
 }
 
-/* Les phrases importantes restent mises en valeur,
-   mais gardent la même taille que le reste du texte */
-#histoire p strong {
-    font-size: 22px;
-    font-weight: 700;
+.wedding-date {
+    font-size: 1rem;
+    letter-spacing: 5px;
+    color: var(--fuchsia);
+    font-weight: 600;
+    margin-bottom: 28px;
 }
 
-/* =========================================
-   PROGRAMME — TEXTE UNIFORMISÉ
-   ========================================= */
-
-#programme p {
-  font-size: 17px;
-  line-height: 1.65;
+.intro-quote {
+    font-family: var(--font-serif);
+    font-size: 1.35rem;
+    font-style: italic;
+    color: var(--text-dark);
+    max-width: 580px;
+    margin: 0 auto;
 }
 
-/* Les titres du programme restent plus grands */
-#programme h3 {
-  font-size: 24px;
-  line-height: 1.25;
+/* DÉCORS FLOTTANTS */
+.decor {
+    position: absolute;
+    pointer-events: none;
+    z-index: 1;
 }
 
-/* Si certains titres sont en strong plutôt qu'en h3 */
-#programme p strong {
-  font-size: inherit;
+.decor-top-right {
+    top: 40px;
+    right: -40px;
+    width: 280px;
 }
 
-/* Version mobile */
-@media (max-width: 600px) {
-  #programme p {
-    font-size: 17px;
-    line-height: 1.65;
-  }
-
-  #programme h3 {
-    font-size: 24px;
-  }
+.decor-bottom-left {
+    bottom: -20px;
+    left: -30px;
+    width: 220px;
 }
 
-
-/* =========================
-   VERSION MOBILE
-========================= */
-
-@media (max-width: 600px) {
-
-    #histoire {
-        padding: 70px 20px;
-    }
-
-    #histoire .section-kicker {
-        font-size: 14px;
-        letter-spacing: 4px;
-        margin-bottom: 15px;
-    }
-
-    #histoire h2 {
-        font-size: 46px;
-        margin-bottom: 30px;
-    }
-
-    #histoire p {
-        font-size: 20px;
-        line-height: 1.5;
-        margin-bottom: 27px;
-    }
-
-    #histoire p strong {
-        font-size: 20px;
-    }
+.decor-hero-flower {
+    bottom: 20px;
+    right: 5%;
+    width: 170px;
 }
 
-
-/* =========================
-   SECTION SUIVANTE
-========================= */
-
-.next-section {
-#rsvp {
-  padding: 90px 25px;
-  background: var(--cream);
-  color: var(--brown);
-  text-align: center;
-}
-#rsvp h2 {
-  max-width: 700px;
-  margin: 0 auto 28px;
-  font-size: 52px;
-  line-height: 1.1;
+/* COMPTE À REBOURS */
+.countdown-section {
+    padding: 50px 0 70px;
+    text-align: center;
+    background: var(--ivoire);
 }
 
-#rsvp p {
-  max-width: 680px;
-  margin-left: auto;
-  margin-right: auto;
-  line-height: 1.8;
+.countdown-grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 28px;
+    margin-bottom: 36px;
 }
 
-#rsvp ul {
-  max-width: 520px;
-  margin: 25px auto 30px;
-  padding-left: 20px;
-  text-align: left;
+.time-box span {
+    display: block;
+    font-family: var(--font-serif);
+    font-size: clamp(2.4rem, 5vw, 3.6rem);
+    color: var(--olive);
+    line-height: 1;
 }
 
-#rsvp li {
-  margin-bottom: 10px;
-}
-  
-}
-
-.section-kicker {
-  margin: 0 0 8px;
-
-  font-family: "Montserrat", sans-serif;
-  font-size: 12px;
-  text-transform: uppercase;
-  letter-spacing: .22em;
+.time-box small {
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+    color: var(--fuchsia);
+    font-weight: 600;
 }
 
-.next-section h2 {
-  margin: 0 0 18px;
-
-  font-family:
-    "Brittany",
-    "Snell Roundhand",
-    "Brush Script MT",
-    cursive;
-
-  font-size: 68px;
-  font-weight: 400;
+.time-sep {
+    width: 1px;
+    height: 45px;
+    background: var(--beige);
 }
-
-.next-section p:last-child {
-  max-width: 520px;
-  margin: auto;
-
-  font-size: 22px;
-  line-height: 1.5;
-}
-
-/* =========================
-   TABLET / ORDINATEUR
-========================= */
-/* =========================
-   OÙ LOGER
-========================= */
-
-.lodging-section {
-  padding: 70px 15px;
-  text-align: center;
-}
-
-.lodging-header {
-  max-width: 720px;
-  margin: 0 auto 45px;
-}
-
-.lodging-header .section-kicker {
-  display: block;
-  margin-bottom: 18px;
-  font-size: 16px;
-  letter-spacing: 4px;
-}
-
-.lodging-header h2 {
-  margin: 0 0 25px;
-}
-
-.lodging-header p {
-  margin: 0 auto;
-  line-height: 1.7;
-}
-
-
-/* CARROUSEL */
-
-.lodging-carousel {
-  position: relative;
-  max-width: 760px;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  gap: 15px;
-}
-
-.lodging-track {
-  width: 100%;
-  display: flex;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  scroll-behavior: smooth;
-  scrollbar-width: none;
-  -webkit-overflow-scrolling: touch;
-}
-
-.lodging-track::-webkit-scrollbar {
-  display: none;
-}
-
-
-/* CARTE */
-
-.lodging-card {
-  flex: 0 0 100%;
-  scroll-snap-align: center;
-  box-sizing: border-box;
-  padding: 8px;
-}
-
-.lodging-card-content {
-  background: #fff;
-  border-radius: 18px;
-  padding: 35px 25px;
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
-}
-
-.lodging-label {
-  display: block;
-  margin-bottom: 12px;
-  font-size: 13px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  opacity: 0.7;
-}
-
-.lodging-card h3 {
-  margin: 0 0 18px;
-  font-size: 26px;
-}
-
-.lodging-address {
-  margin: 0 0 28px;
-  line-height: 1.6;
-}
-
 
 /* BOUTONS */
-
-.lodging-actions {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  align-items: center;
+.btn-primary, .btn-ivory {
+    display: inline-block;
+    padding: 15px 34px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    transition: transform 0.3s, background 0.3s;
 }
 
-.lodging-button {
-  display: inline-block;
-  width: 100%;
-  max-width: 300px;
-  box-sizing: border-box;
-  padding: 13px 20px;
-  border-radius: 8px;
-  text-decoration: none;
-  font-size: 15px;
-  font-weight: 600;
-  transition: transform 0.2s ease;
+.btn-primary {
+    background: var(--fuchsia);
+    color: var(--ivoire);
 }
 
-.lodging-button:hover {
-  transform: translateY(-2px);
+.btn-primary:hover {
+    background: var(--olive);
+    transform: translateY(-2px);
 }
 
-.lodging-button--google {
-  background: #fff;
-  border: 1px solid #ddd;
-  color: #333;
+.btn-ivory {
+    background: var(--ivoire);
+    color: var(--fuchsia);
 }
 
-.lodging-button--availability {
-  background: #4285f4;
-  border: 1px solid #4285f4;
-  color: #fff;
+.btn-ivory:hover {
+    background: var(--beige);
+    color: var(--olive);
+    transform: translateY(-2px);
 }
 
-
-/* FLÈCHES */
-
-.lodging-arrow {
-  flex: 0 0 auto;
-  width: 42px;
-  height: 42px;
-  border: none;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.9);
-  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.12);
-  font-size: 30px;
-  line-height: 1;
-  cursor: pointer;
-  z-index: 2;
-}
-
-.lodging-arrow:hover {
-  transform: scale(1.05);
-}
-
-
-@media (min-width: 700px) {
-
-  .hero {
-    padding: 40px 35px 65px;
-  }
-
-  .hero__content {
-    width: min(100%, 720px);
-  }
-
-  .hero__intro {
-    font-size: 24px;
-  }
-
-  .photo-frame {
-    width: 390px;
-  }
-
-  .countdown {
-    max-width: 560px;
-  }
-}
-
-/* =========================
-   ACCESSIBILITÉ
-========================= */
-
-@media (prefers-reduced-motion: reduce) {
-
-  html {
-    scroll-behavior: auto;
-  }
-}
-/* =========================
-   MENU
-========================= */
-
-.site-menu {
-  display: none;
-}
-
-body.menu-open .site-menu {
-  display: flex;
-  position: fixed;
-  z-index: 20;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 25px;
-
-  background: linear-gradient(
-    145deg,
-    #cb025b 0%,
-    #e63b59 48%,
-    #fe7518 100%
-  );
-}
-
-.site-menu a {
-  color: white;
-  text-decoration: none;
-  font-size: 32px;
-}
-
-.site-menu a:hover {
-  opacity: .7;
-}
-/* PHOTO PRINCIPALE — nouvelle version */
-
-.photo-frame {
+/* SECTIONS COMMUNES */
+section {
+    padding: 90px 0;
     position: relative;
-    width: 100%;
-    max-width: none;
-    margin: 0;
-    transform: none;
-    padding: 0;
-    border-radius: 0;
-    box-shadow: none;
-    background: none;
 }
 
-.photo-frame__backdrop {
-    display: none;
+.section-title {
+    font-family: var(--font-serif);
+    font-size: clamp(2.4rem, 4.5vw, 3.4rem);
+    color: var(--olive);
+    font-weight: 400;
+    margin-bottom: 24px;
 }
 
-.photo-frame__halo {
-    display: none;
-}
-
-.photo-frame__paper {
-    position: relative;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    border-radius: 0;
-    background: none;
-    box-shadow: none;
-    transform: none;
-}
-
-.photo-frame img.hero-photo {
+.signature-accent {
+    font-family: var(--font-script);
+    font-size: 2rem;
+    color: var(--orange);
     display: block;
+    margin-bottom: 4px;
+}
+
+/* NOTRE HISTOIRE */
+.story-section {
+    background-color: #FBF7F0;
+}
+
+.split-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.story-image-wrapper {
+    position: relative;
+    max-width: 420px;
+    margin: 0 auto;
+}
+
+.arch-frame {
+    border-radius: 220px 220px 16px 16px;
+    overflow: hidden;
+    border: 2px solid var(--beige);
+    aspect-ratio: 3/4;
+}
+
+.arch-frame img {
     width: 100%;
-    height: auto;
-    max-width: none;
-    margin: 0;
-    padding: 0;
-    border: 0;
-    border-radius: 0;
-    box-shadow: none;
+    height: 100%;
+    object-fit: cover;
+}
+
+.flower-badge {
+    position: absolute;
+    bottom: -25px;
+    right: -25px;
+    width: 130px;
+}
+
+.story-text p {
+    margin-bottom: 18px;
+    font-size: 1rem;
+    color: #4A463F;
+}
+
+.highlight-chapter {
+    font-family: var(--font-serif);
+    font-size: 1.4rem !important;
+    font-weight: 600;
+    color: var(--fuchsia) !important;
+    margin-top: 24px;
+}
+
+.decor-story-right {
+    top: 20px;
+    right: -30px;
+    width: 240px;
+}
+
+.decor-story-left {
+    bottom: 20px;
+    left: -50px;
+    width: 160px;
+}
+
+/* LE MARIAGE */
+.key-facts {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin: 30px 0;
+}
+
+.fact-item {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.picto {
+    width: 42px;
+    height: 42px;
     object-fit: contain;
 }
-/* Hiérarchie des textes */
-.placeholder-section p {
-  font-size: 20px;
-  line-height: 1.45;
+
+.fact-item strong {
+    display: block;
+    font-size: 1.1rem;
+    color: var(--olive);
 }
 
-.placeholder-section h3 {
-  font-family: "Brittany", "Snell Roundhand", "Brush Script MT", cursive;
-  font-size: 26px;
-  font-weight: 400;
-  line-height: 1.1;
+.fact-item span {
+    font-size: 0.95rem;
+    color: #5C574E;
 }
 
-/* Sur mobile : la photo touche vraiment les deux bords de l'écran */
-@media (max-width: 600px) {
-    .photo-frame {
-        width: 100vw;
-        margin-left: calc(50% - 50vw);
-        margin-right: 0;
-    }
-
-    .photo-frame__paper {
-        width: 100%;
-    }
-
-    .photo-frame img.hero-photo {
-        width: 100%;
-        height: auto;
-    }
-
-  /* Dresscode */
-.dresscode-section {
-    padding: 60px 15px;
+.linear-divider {
+    width: 240px;
+    margin-top: 16px;
 }
 
-.dresscode-text {
-    max-width: 100%;
+.venue-image-wrapper {
+    position: relative;
 }
 
-.dresscode-palette img {
+.arch-horizontal {
+    border-radius: 180px 16px 16px 180px;
+    overflow: hidden;
+    border: 2px solid var(--beige);
+}
+
+.arch-horizontal img {
     width: 100%;
-    max-width: 360px;
-    height: auto;
-}
-.lodging-section {
-    padding: 55px 10px;
-  }
-
-  .lodging-header {
-    margin-bottom: 30px;
-  }
-
-  .lodging-header p {
-    padding: 0 10px;
-  }
-
-  .lodging-carousel {
-    gap: 5px;
-  }
-
-  .lodging-card {
-    padding: 5px;
-  }
-
-  .lodging-card-content {
-    padding: 30px 18px;
-  }
-
-  .lodging-card h3 {
-    font-size: 23px;
-  }
-
-  .lodging-arrow {
-    width: 36px;
-    height: 36px;
-    font-size: 25px;
-  }
-
-  .lodging-button {
-    max-width: 280px;
-  }
-
-}
-/* =========================
-   TEXTE DU SITE EN BLANC
-   ========================= */
-
-body,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-li,
-a,
-span,
-strong,
-small,
-label,
-button {
-  color: #ffffff !important;
+    height: 360px;
+    object-fit: cover;
+    display: block;
 }
 
-/* =========================
-   DRESSCODE
-   ========================= */
-
-.dresscode-section {
-  text-align: center;
-  padding: 80px 20px;
+.flower-venue {
+    position: absolute;
+    bottom: -30px;
+    right: -20px;
+    width: 140px;
 }
 
-.dresscode-section .section-kicker {
-  margin-bottom: 20px;
+/* PROGRAMME */
+.program-section {
+    background-color: #FBF7F0;
 }
 
-.dresscode-section h2 {
-  margin-bottom: 35px;
+.timeline-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+    margin-top: 48px;
 }
 
-.dresscode-text {
-  max-width: 750px;
-  margin: 0 auto 45px;
-  line-height: 1.6;
+.timeline-card {
+    background: var(--ivoire);
+    padding: 32px 24px;
+    border-radius: 20px;
+    border: 1px solid rgba(233, 189, 145, 0.6);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.dresscode-palette {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  margin: 0 auto;
+.timeline-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(63, 77, 10, 0.08);
 }
 
-.dresscode-palette img {
-  display: block;
-  width: 100%;
-  max-width: 420px;
-  height: auto;
-  margin: 0 auto;
-}
-/* =========================================
-   PROGRAMME — TEXTE UNIFORMISÉ
-   ========================================= */
-
-#programme p {
-  font-size: 17px;
-  line-height: 1.65;
+.picto-circle {
+    width: 64px;
+    height: 64px;
+    margin: 0 auto 16px;
+    background: rgba(233, 189, 145, 0.25);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-/* Les titres du programme restent plus grands */
-#programme h3 {
-  font-size: 24px;
-  line-height: 1.25;
+.picto-circle img {
+    width: 32px;
+    height: 32px;
 }
 
-/* Si certains titres sont en strong plutôt qu'en h3 */
-#programme p strong {
-  font-size: inherit;
+.timeline-card .time {
+    display: inline-block;
+    font-weight: 600;
+    color: var(--orange);
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    margin-bottom: 6px;
 }
 
-/* Version mobile */
-@media (max-width: 600px) {
-  #programme p {
-    font-size: 17px;
-    line-height: 1.65;
-  }
-
-  #programme h3 {
-    font-size: 24px;
-  }
-}
-/* =========================================================
-   COHÉRENCE TYPOGRAPHIQUE — TOUT LE SITE
-   ========================================================= */
-
-/* ---------- GRANDS TITRES MANUSCRITS ---------- */
-
-#histoire h2,
-#lieu h2,
-#programme h2 {
-    font-size: 52px;
-    line-height: 1.05;
-    margin: 0 auto 28px;
+.timeline-card h3 {
+    font-family: var(--font-serif);
+    font-size: 1.7rem;
+    color: var(--olive);
+    margin-bottom: 6px;
 }
 
-
-/* ---------- TEXTES COURANTS ---------- */
-
-/* Notre histoire */
-#histoire p {
-    font-size: 17px;
-    line-height: 1.6;
+.timeline-card .place {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--fuchsia);
+    font-weight: 600;
+    margin-bottom: 12px;
 }
 
-/* Château de Vaugrigneuse */
-#lieu p {
-    font-size: 17px;
-    line-height: 1.6;
+.timeline-card .desc {
+    font-size: 0.9rem;
+    color: #555047;
 }
 
-/* Programme */
-#programme p {
-    font-size: 17px;
-    line-height: 1.6;
+.decor-prog-left {
+    top: 40px;
+    left: -30px;
+    width: 220px;
 }
 
-
-/* ---------- SOUS-TITRES DU PROGRAMME ---------- */
-
-#programme h3 {
-    font-size: 24px;
-    line-height: 1.3;
-    margin-top: 32px;
-    margin-bottom: 14px;
+.decor-prog-right {
+    bottom: 20px;
+    right: -40px;
+    width: 200px;
 }
 
-
-/* ---------- FAQ ---------- */
-
-#faq p {
-    font-size: 17px;
-    line-height: 1.6;
+/* INFOS PRATIQUES */
+.infos-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    margin-top: 40px;
 }
 
-
-/* ---------- MOT DE FIN ---------- */
-
-#fin p {
-    font-size: 17px;
-    line-height: 1.6;
+.info-card {
+    background: #FBF7F0;
+    padding: 36px;
+    border-radius: 24px;
+    border: 1px solid var(--beige);
 }
 
+.info-card h3 {
+    font-family: var(--font-serif);
+    font-size: 1.9rem;
+    color: var(--olive);
+    margin-bottom: 16px;
+}
 
-/* ---------- MOBILE ---------- */
+.card-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 12px;
+}
 
-@media (max-width: 600px) {
+.card-header h3 {
+    margin-bottom: 0;
+}
 
-    #histoire h2,
-    #lieu h2,
-    #programme h2 {
-        font-size: 52px;
+.palette-dots {
+    display: flex;
+    gap: 14px;
+    margin-top: 24px;
+}
+
+.dot {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.lodging-list {
+    list-style: none;
+    margin-top: 18px;
+}
+
+.lodging-list li {
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(233, 189, 145, 0.5);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.lodging-list li:last-child {
+    border-bottom: none;
+}
+
+.lodging-list a {
+    color: var(--fuchsia);
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.lodging-list a:hover {
+    text-decoration: underline;
+}
+
+.decor-infos-right {
+    top: 10px;
+    right: -30px;
+    width: 210px;
+}
+
+/* FAQ */
+.faq-section {
+    background: #FBF7F0;
+}
+
+.accordion-item {
+    border-bottom: 1px solid var(--beige);
+}
+
+.accordion-header {
+    width: 100%;
+    background: none;
+    border: none;
+    padding: 22px 0;
+    text-align: left;
+    font-family: var(--font-serif);
+    font-size: 1.45rem;
+    color: var(--olive);
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.accordion-header span {
+    font-family: var(--font-sans);
+    color: var(--fuchsia);
+    font-size: 1.4rem;
+    transition: transform 0.3s;
+}
+
+.accordion-item.active .accordion-header span {
+    transform: rotate(45deg);
+}
+
+.accordion-body {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease;
+}
+
+.accordion-body p {
+    padding-bottom: 22px;
+    color: #4A463F;
+    font-size: 0.95rem;
+}
+
+/* RSVP BANNER */
+.rsvp-section {
+    background-color: var(--fuchsia);
+    color: var(--ivoire);
+    overflow: hidden;
+    padding: 100px 20px;
+}
+
+.rsvp-title {
+    font-family: var(--font-serif);
+    font-size: clamp(3rem, 6vw, 4.5rem);
+    font-weight: 400;
+    letter-spacing: 4px;
+}
+
+.rsvp-subtitle {
+    letter-spacing: 4px;
+    font-size: 0.9rem;
+    color: var(--beige);
+    margin-bottom: 18px;
+}
+
+.rsvp-text {
+    max-width: 500px;
+    margin: 0 auto 32px;
+    opacity: 0.92;
+}
+
+.rsvp-shape-right {
+    right: -40px;
+    top: 20px;
+    width: 200px;
+}
+
+.rsvp-flower-left {
+    left: 4%;
+    bottom: -20px;
+    width: 180px;
+}
+
+/* FOOTER */
+footer {
+    background: var(--olive);
+    color: var(--ivoire);
+    padding: 40px 20px;
+}
+
+.footer-monogram {
+    font-family: var(--font-script);
+    font-size: 2.2rem;
+    color: var(--beige);
+}
+
+.footer-date {
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    opacity: 0.8;
+    margin-top: 6px;
+}
+
+/* ANIMATIONS AU SCROLL */
+.reveal {
+    opacity: 0;
+    transform: translateY(35px);
+    transition: opacity 0.9s cubic-bezier(0.22, 1, 0.36, 1), transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+    transition-delay: var(--delay, 0s);
+}
+
+.reveal-left {
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: opacity 1s cubic-bezier(0.22, 1, 0.36, 1), transform 1s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.reveal-right {
+    opacity: 0;
+    transform: translateX(50px);
+    transition: opacity 1s cubic-bezier(0.22, 1, 0.36, 1), transform 1s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.reveal.is-visible,
+.reveal-left.is-visible,
+.reveal-right.is-visible {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+/* RESPONSIVE MOBILE */
+@media (max-width: 900px) {
+    .split-grid, .infos-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
     }
-
-    #histoire p,
-    #lieu p,
-    #programme p,
-    #faq p,
-    #fin p {
-        font-size: 17px;
-        line-height: 1.6;
+    .timeline-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
-
-    #programme h3 {
-        font-size: 24px;
+    .decor {
+        width: 130px !important;
+        opacity: 0.7;
     }
 }
 
-/* =========================================
-   DÉGRADÉ PRINCIPAL DU SITE
-   ========================================= */
-
-html,
-body {
-  margin: 0;
-  padding: 0;
-  min-height: 100%;
-  background: linear-gradient(
-    135deg,
-    #d9005b 0%,
-    #ed3150 45%,
-    #f35a43 72%,
-    #ff6a1a 100%
-  );
+@media (max-width: 650px) {
+    .menu-toggle {
+        display: flex;
+    }
+    .nav-links {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: var(--ivoire);
+        flex-direction: column;
+        padding: 24px;
+        gap: 18px;
+        border-bottom: 1px solid var(--beige);
+        display: none;
+    }
+    .nav-links.open {
+        display: flex;
+    }
+    .timeline-grid {
+        grid-template-columns: 1fr;
+    }
+    .countdown-grid {
+        gap: 14px;
+    }
 }
-
-
-/* Le contenu du site laisse apparaître
-   le dégradé général */
-body {
-  background-attachment: fixed;
-}
-
-
-/* Toutes les grandes sections utilisent
-   le même dégradé */
-section,
-.next-section {
-  background: transparent !important;
-}
-
-
-/* =========================================
-   MENU
-   ========================================= */
-
-nav,
-.menu,
-header {
-  background: linear-gradient(
-    135deg,
-    #d9005b 0%,
-    #ed3150 45%,
-    #f35a43 72%,
-    #ff6a1a 100%
-  );
-}
-
-
-/* =========================================
-   ÉVITE LES BLOCS BLANCS / UNIS
-   ========================================= */
-
-#histoire,
-#lieu,
-#programme,
-#rsvp,
-#faq,
-#fin {
-  background: transparent !important;
-}
-
-
