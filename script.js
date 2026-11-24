@@ -1,120 +1,83 @@
-// ==============================
-// SAÏDA & DESCHANEL — SCRIPT
-// ==============================
+document.addEventListener("DOMContentLoaded", () => {
+    // 1. MENU MOBILE
+    const menuToggle = document.querySelector(".menu-toggle");
+    const navLinks = document.querySelector(".nav-links");
 
-// ----- COMPTE À REBOURS -----
-
-const weddingDate = new Date("2027-06-05T14:00:00+02:00");
-
-const days = document.getElementById("days");
-const hours = document.getElementById("hours");
-const minutes = document.getElementById("minutes");
-const seconds = document.getElementById("seconds");
-
-function updateCountdown() {
-  const now = new Date();
-  const distance = weddingDate - now;
-
-  if (distance <= 0) {
-    days.textContent = "0";
-    hours.textContent = "00";
-    minutes.textContent = "00";
-    seconds.textContent = "00";
-    return;
-  }
-
-  const totalSeconds = Math.floor(distance / 1000);
-
-  const d = Math.floor(totalSeconds / 86400);
-  const h = Math.floor((totalSeconds % 86400) / 3600);
-  const m = Math.floor((totalSeconds % 3600) / 60);
-  const s = totalSeconds % 60;
-
-  days.textContent = d;
-  hours.textContent = String(h).padStart(2, "0");
-  minutes.textContent = String(m).padStart(2, "0");
-  seconds.textContent = String(s).padStart(2, "0");
-}
-
-updateCountdown();
-setInterval(updateCountdown, 1000);
-
-
-// ----- MENU -----
-
-const menuButton = document.querySelector(".menu-button");
-
-if (menuButton) {
-  menuButton.addEventListener("click", () => {
-    document.body.classList.toggle("menu-open");
-
-    const isOpen = document.body.classList.contains("menu-open");
-
-    menuButton.setAttribute("aria-expanded", isOpen);
-  });
-}
-
-
-// ----- BOUTON CONFIRMER MA PRÉSENCE -----
-
-const rsvpButton = document.querySelector(".rsvp-button");
-
-if (rsvpButton) {
-  rsvpButton.addEventListener("click", () => {
-    const rsvpSection = document.querySelector("#rsvp");
-
-    if (rsvpSection) {
-      rsvpSection.scrollIntoView({
-        behavior: "smooth"
-      });
-    }
-  });
-}
-
-
-// ----- LIENS "DÉCOUVRIR" -----
-
-const discoverButton = document.querySelector(".discover");
-
-if (discoverButton) {
-  discoverButton.addEventListener("click", () => {
-    const nextSection = document.querySelector("#rsvp");
-
-    if (nextSection) {
-      nextSection.scrollIntoView({
-        behavior: "smooth"
-      });
-    }
-  });
-
-  /* =========================
-   CARROUSEL OÙ LOGER
-========================= */
-
-const lodgingTrack = document.querySelector('.lodging-track');
-const lodgingPrev = document.querySelector('.lodging-arrow--prev');
-const lodgingNext = document.querySelector('.lodging-arrow--next');
-
-if (lodgingTrack && lodgingPrev && lodgingNext) {
-
-  const getCardWidth = () => {
-    const card = lodgingTrack.querySelector('.lodging-card');
-    return card ? card.offsetWidth : lodgingTrack.clientWidth;
-  };
-
-  lodgingNext.addEventListener('click', () => {
-    lodgingTrack.scrollBy({
-      left: getCardWidth(),
-      behavior: 'smooth'
+    menuToggle.addEventListener("click", () => {
+        navLinks.classList.toggle("open");
     });
-  });
 
-  lodgingPrev.addEventListener('click', () => {
-    lodgingTrack.scrollBy({
-      left: -getCardWidth(),
-      behavior: 'smooth'
+    navLinks.querySelectorAll("a").forEach(link => {
+        link.addEventListener("click", () => navLinks.classList.remove("open"));
     });
-  });
 
-}
-}
+    // 2. COMPTE À REBOURS (5 Juin 2027 à 14h00)
+    const weddingDate = new Date("June 5, 2027 14:00:00").getTime();
+
+    function updateCountdown() {
+        const now = new Date().getTime();
+        const distance = weddingDate - now;
+
+        if (distance < 0) return;
+
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        document.getElementById("days").textContent = String(days).padStart(3, "0");
+        document.getElementById("hours").textContent = String(hours).padStart(2, "0");
+        document.getElementById("minutes").textContent = String(minutes).padStart(2, "0");
+        document.getElementById("seconds").textContent = String(seconds).padStart(2, "0");
+    }
+
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+
+    // 3. ANIMATIONS D'APPARITION AU SCROLL (Intersection Observer)
+    const observerOptions = {
+        threshold: 0.15,
+        rootMargin: "0px 0px -40px 0px"
+    };
+
+    const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("is-visible");
+            }
+        });
+    }, observerOptions);
+
+    document.querySelectorAll(".reveal, .reveal-left, .reveal-right").forEach(el => {
+        revealObserver.observe(el);
+    });
+
+    // 4. EFFET PARALLAXE LÉGER SUR LES ILLUSTRATIONS AU SCROLL
+    const parallaxElements = document.querySelectorAll(".parallax");
+    window.addEventListener("scroll", () => {
+        const scrollY = window.scrollY;
+        parallaxElements.forEach(el => {
+            const speed = parseFloat(el.dataset.speed) || 0.1;
+            el.style.transform = `translateY(${scrollY * speed}px)`;
+        });
+    }, { passive: true });
+
+    // 5. ACCORDÉON FAQ
+    document.querySelectorAll(".accordion-header").forEach(button => {
+        button.addEventListener("click", () => {
+            const item = button.parentElement;
+            const body = item.querySelector(".accordion-body");
+            const isActive = item.classList.contains("active");
+
+            document.querySelectorAll(".accordion-item").forEach(i => {
+                i.classList.remove("active");
+                i.querySelector(".accordion-body").style.maxHeight = null;
+            });
+
+            if (!isActive) {
+                item.classList.add("active");
+                body.style.maxHeight = body.scrollHeight + "px";
+            }
+        });
+    });
+});
